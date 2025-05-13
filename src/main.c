@@ -3,10 +3,9 @@
 
 
 int main() {
-    for (int i = 1; i < argc; i++){
-        printf("word %d: %s", i, argv[i]);
-    }
-    printf("argc: %d", argc);
-    return 0;
+    char line[256];
 
+    while (fgets(line, sizeof(line), stdin)) {
+        printf("%s", line);
+    }
 }
